@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel personal del estudiante del Repositorio Digital SIS.">
+  <title>Panel del estudiante | SIS Repositorio Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="panel-estudiante.css">
+</head>
+<body class="student-dashboard">
+  <header class="site-header student-header">
+    <a class="brand" href="index.html" aria-label="SIS Repositorio Digital, inicio">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 80 60"><path d="M40 3 46 20 63 26 46 32 40 49 34 32 17 26 34 20Z" fill="currentColor"/><path d="M7 42c11-2 20 1 33 10 13-9 22-12 33-10M11 50c10-1 19 2 29 8 10-6 19-9 29-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <span class="brand-divider"></span><span class="brand-name">SIS <span>|</span> Repositorio Digital</span>
+    </a>
+    <button class="menu-toggle" id="student-menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="student-main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="index.html">⌂ <span>Inicio</span></a>
+      <a class="nav-link" href="proyectos.html">⌕ <span>Explorar proyectos</span></a>
+      <a class="nav-link" href="index.html#areas">▦ <span>Áreas</span></a>
+      <a class="nav-link" href="index.html#acerca">● <span>Acerca de</span></a>
+    </nav>
+    <button class="student-account" id="account-button" aria-expanded="false">
+      <span class="account-avatar" aria-hidden="true">ML</span><span class="account-name">María López<small>Estudiante</small></span><span class="account-chevron">⌄</span>
+    </button>
+    <div class="account-menu" id="account-menu" hidden><a href="#perfil">Mi perfil</a><a href="#configuracion">Configuración</a><a href="login.html">Cerrar sesión</a></div>
+  </header>
+
+  <main class="dashboard-layout">
+    <aside class="student-sidebar" id="student-sidebar">
+      <div class="student-profile">
+        <div class="profile-avatar" aria-hidden="true"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="60" fill="#aed5f5"/><path d="M25 112c5-25 21-35 35-35s31 10 36 35" fill="#253f7d"/><path d="M37 52c-2-23 7-37 24-37 18 0 28 15 24 38l-7 18H43Z" fill="#3c2d2a"/><ellipse cx="60" cy="53" rx="23" ry="28" fill="#f1bd9d"/><path d="M36 48c0-23 9-35 25-35 19 0 28 16 25 36l-9-17c-12 5-23 4-33-1Z" fill="#3c2d2a"/><path d="M45 83 60 94 75 83" fill="none" stroke="#fff" stroke-width="5"/><path d="M40 105 60 94 80 105" fill="none" stroke="#fff" stroke-width="4"/></svg><span class="edit-avatar" title="Editar foto">✎</span></div>
+        <h2>María López</h2><span class="role-badge">Estudiante</span>
+      </div>
+      <nav class="sidebar-nav" aria-label="Menú del estudiante">
+        <a class="sidebar-link active" href="panel-estudiante.html"><span>⌂</span> Mi Panel</a>
+        <a class="sidebar-link" href="#favoritos"><span>★</span> Mis Favoritos <b id="sidebar-favorite-count">3</b></a>
+        <a class="sidebar-link" href="#descargas"><span>⇩</span> Mis Descargas</a>
+        <a class="sidebar-link" href="#perfil"><span>♟</span> Mi Perfil</a>
+        <a class="sidebar-link" href="#configuracion"><span>⚙</span> Configuración</a>
+        <a class="sidebar-link logout-link" href="login.html"><span>⇥</span> Cerrar Sesión</a>
+      </nav>
+      <div class="faculty-card"><span aria-hidden="true">🎓</span><strong>Ingeniería de<br>Sistemas Informáticos</strong><small>UES · Facultad Multidisciplinaria Oriental</small></div>
+    </aside>
+
+    <div class="dashboard-main">
+      <section class="welcome-banner">
+        <div class="welcome-copy"><span class="banner-eyebrow">TU ESPACIO ACADÉMICO</span><h1>¡Bienvenida, María!</h1><p>Explora, guarda y gestiona tus proyectos académicos.</p><a href="proyectos.html" class="banner-cta">Explorar proyectos <span>→</span></a></div>
+        <div class="welcome-art" aria-hidden="true">
+          <span class="art-square sq-one"></span><span class="art-square sq-two"></span><span class="art-spark">✦</span>
+          <svg viewBox="0 0 520 250"><defs><linearGradient id="screenfill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f9ff"/><stop offset="1" stop-color="#8fc9ff"/></linearGradient><linearGradient id="basefill"><stop stop-color="#18366e"/><stop offset="1" stop-color="#5ba1f0"/></linearGradient></defs><path d="M100 48 306 14Q316 12 314 24L292 157 78 187Z" fill="#193b78" stroke="#193b78" stroke-width="8"/><path d="M111 52 302 26 282 147 90 173Z" fill="url(#screenfill)"/><path d="M155 78 190 94 225 78 190 62Z" fill="#367adf"/><path d="M168 91v13c14 11 31 11 45 0V91l-22 12Z" fill="#367adf"/><rect x="132" y="120" width="112" height="5" rx="2" fill="#6baef0"/><rect x="148" y="132" width="80" height="5" rx="2" fill="#9ccff9"/><path d="M78 187 292 157 377 183Q384 187 372 193L176 229Q167 231 157 228L25 203Q18 200 27 196Z" fill="url(#basefill)"/><path d="M131 193 283 171 323 185 170 211Z" fill="#17366c"/><g transform="translate(320 85)"><rect x="12" y="73" width="124" height="25" rx="8" fill="#1b3f7d"/><rect x="5" y="49" width="124" height="25" rx="8" fill="#2e63a7"/><rect x="0" y="25" width="124" height="25" rx="8" fill="#3b79c3"/><rect x="8" y="0" width="124" height="25" rx="8" fill="#6aa8ec"/><path d="M18 8h102M10 33h102M15 57h102M22 81h102" stroke="#d8edff" stroke-width="4" stroke-linecap="round"/></g></svg>
+        </div>
+      </section>
+
+      <section class="dashboard-stats" aria-label="Resumen de tu cuenta">
+        <article class="dashboard-stat"><span class="stat-icon">▤</span><div><strong>24</strong><span>Proyectos disponibles</span></div></article>
+        <article class="dashboard-stat"><span class="stat-icon star-stat">★</span><div><strong id="favorite-count">3</strong><span>Favoritos guardados</span></div></article>
+        <article class="dashboard-stat"><span class="stat-icon download-stat">⇩</span><div><strong>5</strong><span>Descargas realizadas</span></div></article>
+      </section>
+
+      <div class="dashboard-columns">
+        <div class="dashboard-primary">
+          <section class="dashboard-panel favorites-panel" id="favoritos">
+            <div class="panel-heading"><h2><span>★</span> Mis Favoritos</h2><a href="proyectos.html">Ver catálogo <b>→</b></a></div>
+            <div class="favorite-grid" id="favorite-grid">
+              <article class="favorite-card" data-project="1">
+                <div class="favorite-image image-cloud" aria-hidden="true"><svg viewBox="0 0 320 120"><defs><linearGradient id="cloudbg"><stop stop-color="#082c68"/><stop offset="1" stop-color="#168fe8"/></linearGradient></defs><rect width="320" height="120" fill="url(#cloudbg)"/><g stroke="#44d8ff" opacity=".35"><path d="M0 90 320 25M0 110 320 45M20 0 100 120M100 0 180 120M180 0 260 120"/></g><path d="M128 77H203a18 18 0 0 0 0-36 27 27 0 0 0-51-5 22 22 0 0 0-24 22 19 19 0 0 0 0 19Z" fill="none" stroke="#b6f6ff" stroke-width="5"/><path d="M165 50v37m-14-14 14-14 14 14" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <button class="favorite-toggle is-favorite" aria-label="Quitar de favoritos" aria-pressed="true">♥</button>
+                <div class="favorite-content"><h3>Aplicación móvil para control de proyectos</h3><div class="project-meta"><span>♟ José García</span><span>▦ 2025</span></div><p>Aplicación móvil para la gestión y seguimiento de proyectos...</p><div class="tag-list"><span>Aplicaciones móviles</span><span>Gestión</span></div><a class="project-detail-link" href="detalle-proyecto.html">◉ Ver detalles <b>→</b></a></div>
+              </article>
+              <article class="favorite-card" data-project="2">
+                <div class="favorite-image image-database" aria-hidden="true"><svg viewBox="0 0 320 120"><defs><linearGradient id="dbbg"><stop stop-color="#071b52"/><stop offset="1" stop-color="#155ab2"/></linearGradient></defs><rect width="320" height="120" fill="url(#dbbg)"/><g opacity=".25" stroke="#52baff"><path d="M0 20h320M0 45h320M0 70h320M0 95h320M30 0v120M80 0v120M130 0v120M180 0v120M230 0v120M280 0v120"/></g><ellipse cx="160" cy="32" rx="43" ry="16" fill="#9ceaff"/><path d="M117 32v51c0 9 19 17 43 17s43-8 43-17V32" fill="#208fe3" stroke="#8fe6ff" stroke-width="3"/><path d="M117 49c0 9 19 16 43 16s43-7 43-16M117 67c0 9 19 16 43 16s43-7 43-16" fill="none" stroke="#a5f0ff" stroke-width="3"/><ellipse cx="160" cy="32" rx="43" ry="16" fill="#5bc5ff" stroke="#d0f8ff" stroke-width="3"/></svg></div>
+                <button class="favorite-toggle is-favorite" aria-label="Quitar de favoritos" aria-pressed="true">♥</button>
+                <div class="favorite-content"><h3>Análisis de datos para la toma de decisiones</h3><div class="project-meta"><span>♟ Carlos Méndez</span><span>▦ 2026</span></div><p>Estudio y análisis de datos para apoyar la toma de decisiones...</p><div class="tag-list"><span>Bases de datos</span><span>IA</span></div><a class="project-detail-link" href="detalle-proyecto.html">◉ Ver detalles <b>→</b></a></div>
+              </article>
+              <article class="favorite-card" data-project="3">
+                <div class="favorite-image image-code" aria-hidden="true"><svg viewBox="0 0 320 120"><defs><linearGradient id="codebg"><stop stop-color="#091c46"/><stop offset="1" stop-color="#263e76"/></linearGradient></defs><rect width="320" height="120" fill="url(#codebg)"/><rect x="30" y="15" width="260" height="92" rx="6" fill="#101b37" stroke="#4c76b9" stroke-width="2"/><circle cx="43" cy="25" r="3" fill="#ff8d9b"/><circle cx="54" cy="25" r="3" fill="#f9d26b"/><circle cx="65" cy="25" r="3" fill="#75dca6"/><g stroke-width="3" stroke-linecap="round"><path d="M49 42h75M62 53h114M62 64h87M49 75h128M62 86h95" stroke="#65b9ff"/><path d="M133 42h58M184 53h59M157 64h70M190 75h52M169 86h61" stroke="#8fe2ce"/></g></svg></div>
+                <button class="favorite-toggle is-favorite" aria-label="Quitar de favoritos" aria-pressed="true">♥</button>
+                <div class="favorite-content"><h3>Sistema web para la gestión académica</h3><div class="project-meta"><span>♟ María López</span><span>▦ 2025</span></div><p>Plataforma web orientada a optimizar los procesos...</p><div class="tag-list"><span>Desarrollo web</span><span>Sistemas</span></div><a class="project-detail-link" href="detalle-proyecto.html">◉ Ver detalles <b>→</b></a></div>
+              </article>
+            </div>
+            <div class="favorites-empty" id="favorites-empty" hidden><span>☆</span><h3>Aún no tienes favoritos</h3><p>Explora el catálogo y guarda los proyectos que te interesen.</p><a href="proyectos.html" class="button-primary">Explorar proyectos</a></div>
+          </section>
+
+          <section class="dashboard-panel activity-summary" id="descargas">
+            <div class="panel-heading"><h2><span>▥</span> Resumen de tu actividad</h2><a href="#actividad">Ver actividad <b>→</b></a></div>
+            <div class="activity-content"><div class="progress-ring"><span>75%</span></div><div class="activity-description"><strong>Tu actividad en el repositorio</strong><p>Has consultado 5 proyectos en los últimos 30 días.</p></div><div class="activity-mini-stat"><span>★</span><strong id="activity-favorite-count">3</strong><small>Proyectos favoritos</small></div><div class="activity-mini-stat"><span>⇩</span><strong>5</strong><small>Descargas realizadas</small></div><div class="encouragement"><span>🏆</span><strong>¡Sigue explorando!</strong><small>El conocimiento está a un clic de distancia.</small></div></div>
+          </section>
+        </div>
+
+        <aside class="dashboard-rail">
+          <section class="dashboard-panel recent-panel" id="actividad"><div class="panel-heading"><h2><span>▦</span> Actividad reciente</h2></div><ol class="activity-timeline"><li><strong>Guardaste en favoritos:</strong><p>Modelo de IA para el análisis predictivo de datos</p><time>Hace 2 días</time></li><li><strong>Consultaste el proyecto:</strong><p>Aplicación móvil para control de proyectos</p><time>Hace 3 días</time></li><li><strong>Descargaste el archivo:</strong><p>Presentación.pptx</p><time>Hace 4 días</time></li></ol><a href="#actividad" class="rail-link">Ver historial completo <b>→</b></a></section>
+          <section class="dashboard-panel announcements-panel"><div class="panel-heading"><h2><span>⚑</span> Anuncios</h2></div><article class="announcement"><span class="announcement-icon">▤</span><div><strong>Nuevo material disponible</strong><p>Ya puedes consultar los proyectos del año 2026.</p><time>28 Oct. 2026</time></div></article><article class="announcement"><span class="announcement-icon">🔧</span><div><strong>Mantenimiento del sistema</strong><p>Habrá mantenimiento el próximo 15 de noviembre.</p><time>25 Oct. 2026</time></div></article></section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer student-footer"><a class="footer-brand" href="index.html"><span class="footer-mark">✦</span><span>SIS | Repositorio Digital</span></a><span class="footer-divider"></span><p>Facultad Multidisciplinaria Oriental · Ingeniería de Sistemas</p><em>Conocimiento que impulsa el futuro</em><span class="footer-decoration"></span></footer>
+  <script src="panel-estudiante.js"></script>
+</body>
+</html>

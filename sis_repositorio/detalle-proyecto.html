@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalle de un proyecto académico del Repositorio Digital SIS.">
+  <title>Detalle del proyecto | SIS Repositorio Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="detalle-proyecto.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SIS Repositorio Digital, inicio">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 80 60"><path d="M40 3 46 20 63 26 46 32 40 49 34 32 17 26 34 20Z" fill="currentColor"/><path d="M7 42c11-2 20 1 33 10 13-9 22-12 33-10M11 50c10-1 19 2 29 8 10-6 19-9 29-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <span class="brand-divider"></span><span class="brand-name">SIS <span>|</span> Repositorio Digital</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="index.html">⌂ <span>Inicio</span></a>
+      <a class="nav-link active" href="proyectos.html">▰ <span>Explorar proyectos</span></a>
+      <a class="nav-link" href="proyectos.html#catalogo">▦ <span>Áreas</span></a>
+      <a class="nav-link" href="index.html#acerca">● <span>Acerca de</span></a>
+    </nav>
+    <a class="login-button" href="#iniciar-sesion"><span aria-hidden="true">♟</span> Iniciar sesión</a>
+  </header>
+
+  <main class="detail-page" id="detalle-proyecto">
+    <nav class="detail-breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a><span>›</span><a href="proyectos.html">Explorar proyectos</a><span>›</span><span id="breadcrumb-title">Detalle del proyecto</span>
+    </nav>
+
+    <section class="detail-hero">
+      <div class="detail-hero-copy">
+        <div class="detail-badges"><span class="status-badge"><i></i> Documento disponible</span><span class="type-badge" id="project-type-badge">Proyecto de graduación</span></div>
+        <p class="detail-eyebrow">REPOSITORIO ACADÉMICO · INGENIERÍA DE SISTEMAS</p>
+        <h1 id="project-title">Sistema web para la gestión académica</h1>
+        <p class="detail-intro" id="project-short-summary">Plataforma web orientada a optimizar los procesos académicos y facilitar la consulta de información institucional.</p>
+        <div class="detail-hero-actions"><a class="primary-action" href="#archivos">↧ <span>Consultar archivos</span></a><button class="outline-action" id="detail-favorite" type="button" aria-pressed="false">♡ <span>Guardar en favoritos</span></button></div>
+      </div>
+      <div class="detail-hero-visual" aria-hidden="true"><div class="visual-glow"></div><div class="visual-document"><div class="visual-document-top"><span></span><span></span><span></span></div><div class="visual-star">✦</div><div class="visual-lines"><i></i><i></i><i></i><i></i></div><div class="visual-document-footer"><span>SIS</span><span>REPOSITORIO DIGITAL</span></div></div><span class="float-chip chip-one">✧ Investigación</span><span class="float-chip chip-two">⌘ Conocimiento</span></div>
+    </section>
+
+    <div class="detail-layout">
+      <div class="detail-main-column">
+        <section class="detail-panel summary-panel" aria-labelledby="summary-heading">
+          <div class="section-heading"><span class="section-icon">▤</span><div><p class="section-kicker">SOBRE EL PROYECTO</p><h2 id="summary-heading">Resumen</h2></div></div>
+          <p id="project-summary">Este proyecto propone el desarrollo de una plataforma web para apoyar la gestión de procesos académicos. La solución centraliza información relevante, facilita las consultas y ofrece una interfaz organizada para mejorar el acceso a los datos de la comunidad universitaria. La descripción presentada es ilustrativa y deberá sustituirse por el resumen registrado en el repositorio.</p>
+          <div class="summary-callout"><span>✦</span><p>Este repositorio busca preservar y facilitar el acceso al conocimiento desarrollado por estudiantes y docentes.</p></div>
+        </section>
+
+        <section class="detail-panel authors-panel" aria-labelledby="authors-heading">
+          <div class="section-heading"><span class="section-icon">♙</span><div><p class="section-kicker">PERSONAS INVESTIGADORAS</p><h2 id="authors-heading">Autores</h2></div><span class="heading-count" id="author-count">1 autor</span></div>
+          <div class="author-list" id="author-list"><article class="author-item"><span class="author-avatar-large">ML</span><div><h3>María López</h3><p>Autora del proyecto</p></div><span class="author-order">Autor/a 1</span></article></div>
+        </section>
+
+        <section class="detail-panel files-panel" id="archivos" aria-labelledby="files-heading">
+          <div class="section-heading"><span class="section-icon">▧</span><div><p class="section-kicker">DOCUMENTACIÓN ASOCIADA</p><h2 id="files-heading">Archivos del proyecto</h2></div><span class="heading-count">2 archivos de ejemplo</span></div>
+          <p class="panel-description">Consulta los documentos asociados a este trabajo. La disponibilidad real dependerá de los recursos registrados y de los permisos de acceso.</p>
+          <div class="file-list" id="file-list">
+            <article class="file-item"><span class="file-type pdf">PDF</span><div class="file-info"><h3>Documento principal</h3><p>PDF · Documento de proyecto · Ejemplo</p></div><span class="file-access available-file">Disponible</span><button type="button" class="file-action" data-file-action="principal" aria-label="Consultar documento principal">↗</button></article>
+            <article class="file-item"><span class="file-type doc">DOC</span><div class="file-info"><h3>Material complementario</h3><p>DOCX · Anexo · Ejemplo</p></div><span class="file-access restricted-file">Por verificar</span><button type="button" class="file-action" data-file-action="anexo" aria-label="Consultar material complementario">↗</button></article>
+          </div>
+          <p class="file-disclaimer"><span>ⓘ</span> Los nombres y archivos de esta pantalla son demostrativos. No representan documentos reales descargables.</p>
+        </section>
+      </div>
+
+      <aside class="detail-side-column">
+        <section class="detail-panel metadata-panel" aria-labelledby="metadata-heading">
+          <div class="section-heading compact-heading"><span class="section-icon">☷</span><div><p class="section-kicker">DATOS GENERALES</p><h2 id="metadata-heading">Ficha del proyecto</h2></div></div>
+          <dl class="metadata-list">
+            <div><dt><span>▣</span> Año de publicación</dt><dd id="project-year">2025</dd></div>
+            <div><dt><span>⌂</span> Carrera</dt><dd id="project-career">Ingeniería de Sistemas Informáticos</dd></div>
+            <div><dt><span>◈</span> Tipo de proyecto</dt><dd id="project-type">Proyecto de graduación</dd></div>
+            <div><dt><span>✧</span> Temática</dt><dd id="project-topic">Desarrollo web</dd></div>
+            <div><dt><span>◉</span> Estado</dt><dd><span class="metadata-status"><i></i> Publicado</span></dd></div>
+          </dl>
+        </section>
+
+        <section class="detail-panel tags-panel" aria-labelledby="tags-heading">
+          <div class="section-heading compact-heading"><span class="section-icon">⌑</span><div><p class="section-kicker">PALABRAS CLAVE</p><h2 id="tags-heading">Etiquetas</h2></div></div>
+          <div class="project-tags" id="project-tags"><span>Aplicación web</span><span>Gestión académica</span><span>Base de datos</span><span>Automatización</span></div>
+        </section>
+
+        <section class="help-card"><div class="help-spark">✦</div><h2>¿Buscas algo similar?</h2><p>Explora otros proyectos por temática, tipo o año de publicación.</p><a href="proyectos.html">Volver al catálogo <span>→</span></a></section>
+      </aside>
+    </div>
+    <div class="detail-back-row"><a href="proyectos.html" class="back-link">← Volver a explorar proyectos</a><span class="record-note">Ficha de ejemplo · Repositorio Digital SIS</span></div>
+  </main>
+  <footer class="site-footer detail-footer"><div><strong>SIS <span>|</span> Repositorio Digital</strong><p>Conservando y compartiendo el conocimiento académico.</p></div><a href="proyectos.html">Explorar proyectos ↗</a></footer>
+  <script src="detalle-proyecto.js"></script>
+</body>
+</html>
