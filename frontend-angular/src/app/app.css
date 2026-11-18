@@ -155,102 +155,48 @@ button:disabled{opacity:.55;cursor:not-allowed}
 }
 @media(prefers-reduced-motion:reduce){.primary-button,.secondary-button,.page-button,.decision,.dashboard-nav button,.nav-link,.panel-anchor-nav a{transition:none}}
 
-/* Paleta cristal solicitada: Dark Jungle Green, Ateneo Blue y Powder Blue */
+/* Acceso directo de publicación y acabado claro del diseño aprobado */
+.intro-actions{display:flex;align-items:center;gap:13px;margin:17px 0 21px}
+.intro-actions span{color:#51647d;font-size:12px}
+.intro-actions .primary-button{min-height:45px}
+.request-link{border:0;background:transparent;color:#31435d;font:inherit;cursor:pointer}
+.request-link:hover{background:rgba(255,255,255,.6)}
+@media(max-width:560px){.intro-actions{align-items:flex-start;flex-direction:column}.intro-actions .primary-button{width:100%;min-height:47px}}
+
+/* Diseño cristal azul aprobado por el equipo */
 .page-shell{
-  --dark-jungle:#0D1C26;
-  --ateneo-blue:#0C396F;
-  --cyan-azure:#368BBF;
-  --sky-blue:#68C6DD;
-  --powder-blue:#B6DFE7;
+  --dark-jungle:#0D1C26;--ateneo-blue:#0C396F;--cyan-azure:#368BBF;--sky-blue:#68C6DD;--powder-blue:#B6DFE7;
   color:var(--dark-jungle);
-  background:
-    radial-gradient(ellipse at 8% 4%,rgba(104,198,221,.48),transparent 28%),
-    radial-gradient(ellipse at 91% 9%,rgba(54,139,191,.55),transparent 29%),
-    radial-gradient(ellipse at 73% 55%,rgba(104,198,221,.24),transparent 36%),
-    linear-gradient(165deg,#0C396F 0%,#0C396F 47%,#0a315f 100%);
+  background:radial-gradient(ellipse at 8% 4%,rgba(104,198,221,.48),transparent 28%),radial-gradient(ellipse at 91% 9%,rgba(54,139,191,.55),transparent 29%),radial-gradient(ellipse at 73% 55%,rgba(104,198,221,.24),transparent 36%),linear-gradient(165deg,#0C396F 0%,#0C396F 47%,#0a315f 100%);
 }
 .glass-panel{
   border-color:rgba(255,255,255,.9);
   background:linear-gradient(145deg,rgba(255,255,255,.84),rgba(182,223,231,.92) 36%,rgba(182,223,231,.78) 74%,rgba(104,198,221,.42));
   box-shadow:0 16px 34px rgba(5,24,38,.28),0 0 20px rgba(182,223,231,.2),inset 0 2px 0 rgba(255,255,255,.98),inset 0 -3px 7px rgba(12,57,111,.15);
-  backdrop-filter:blur(24px) saturate(145%);
-  -webkit-backdrop-filter:blur(24px) saturate(145%);
+  backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);
 }
-.topbar,.workspace-header{
-  border-color:rgba(255,255,255,.98);
-  background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(182,223,231,.94) 42%,rgba(182,223,231,.78));
-  box-shadow:0 17px 32px rgba(3,25,45,.34),0 0 24px rgba(104,198,221,.24),inset 0 3px 0 #fff,inset 0 -4px 9px rgba(12,57,111,.17);
-}
+.topbar,.workspace-header{border-color:rgba(255,255,255,.98);background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(182,223,231,.94) 42%,rgba(182,223,231,.78));box-shadow:0 17px 32px rgba(3,25,45,.34),0 0 24px rgba(104,198,221,.24),inset 0 3px 0 #fff,inset 0 -4px 9px rgba(12,57,111,.17)}
 .brand-copy strong,.intro h1,.login-card h1,.dashboard-heading h1,.panel-title h2,.work-card h2,.submission-info h3,.delivery-status-head h3,.role-card h3{color:var(--dark-jungle)}
 .brand-copy small,.intro-copy,.view-intro,.site-footer span{color:#24495d}
 .eyebrow,.clear-button,.resource-link{color:var(--ateneo-blue)}
-.search-control,.scope-select,.sort-control,.count-badge,.filters,.work-card,.management-card,.login-card,.stat-card,.role-card,.work-dialog,.site-footer{
-  border-color:rgba(255,255,255,.96);
-  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(182,223,231,.96) 40%,rgba(182,223,231,.84) 74%,rgba(104,198,221,.38));
-  box-shadow:0 17px 32px rgba(5,26,43,.3),0 0 22px rgba(182,223,231,.25),inset 0 3px 0 #fff,inset 0 -3px 7px rgba(12,57,111,.16);
-}
+.search-control,.scope-select,.sort-control,.count-badge,.filters,.work-card,.management-card,.login-card,.stat-card,.role-card,.work-dialog,.site-footer{border-color:rgba(255,255,255,.96);background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(182,223,231,.96) 40%,rgba(182,223,231,.84) 74%,rgba(104,198,221,.38));box-shadow:0 17px 32px rgba(5,26,43,.3),0 0 22px rgba(182,223,231,.25),inset 0 3px 0 #fff,inset 0 -3px 7px rgba(12,57,111,.16)}
 .work-card{position:relative;overflow:hidden}
-.work-card::before{
-  content:"";position:absolute;inset:0 0 auto;height:57%;border-radius:inherit;
-  background:linear-gradient(180deg,rgba(255,255,255,.74),rgba(255,255,255,.22) 38%,transparent);
-  pointer-events:none;
-}
-.work-card::after{
-  content:"";position:absolute;z-index:0;top:-34%;left:4%;width:34%;height:155%;transform:rotate(17deg);
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.27),transparent);pointer-events:none;
-}
-.work-card>*{position:relative;z-index:1}
 .brand-copy small,.intro-copy,.view-intro,.summary,.work-details dd,.dialog-details dd,.filter-group summary,.check-option,.stat-card>span,.panel-title p,.role-card p{color:#173b50}
 .search-control input,.scope-select,.sort-control select,.submission-form input,.submission-form select,.submission-form textarea,.permission-field select,.permission-field textarea,.add-user-form input,.login-form input{color:var(--dark-jungle)}
 .search-control input::placeholder{color:#42677a}
-.search-control,.scope-select,.sort-control select,.submission-form input,.submission-form select,.submission-form textarea,.permission-field select,.permission-field textarea,.add-user-form input,.login-form input{
-  border-color:rgba(255,255,255,.98);
-  background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(182,223,231,.7));
-  box-shadow:inset 0 2px 0 #fff,inset 0 -2px 5px rgba(12,57,111,.12),0 4px 11px rgba(12,57,111,.12);
-}
+.search-control,.scope-select,.sort-control select,.submission-form input,.submission-form select,.submission-form textarea,.permission-field select,.permission-field textarea,.add-user-form input,.login-form input{border-color:rgba(255,255,255,.98);background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(182,223,231,.7));box-shadow:inset 0 2px 0 #fff,inset 0 -2px 5px rgba(12,57,111,.12),0 4px 11px rgba(12,57,111,.12)}
 .search-icon{background:linear-gradient(180deg,#fff 0%,#68C6DD 23%,#368BBF 62%,#0C396F 100%);color:#0D1C26;box-shadow:0 9px 19px rgba(12,57,111,.34),inset 0 3px 0 rgba(255,255,255,.96),inset 0 -3px 5px rgba(12,57,111,.3)}
-.primary-button,.nav-link.active,.nav-link.login-link,.area-chip.selected,.decision{
-  border:1px solid rgba(255,255,255,.38);
-  background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(255,255,255,0) 42%),linear-gradient(145deg,#0D1C26,#0D1C26);
-  color:#fff;
-  text-shadow:0 1px 1px rgba(0,0,0,.38);
-  box-shadow:0 9px 20px rgba(4,16,23,.34),inset 0 2px 0 rgba(255,255,255,.58),inset 0 -3px 5px rgba(0,0,0,.24);
-}
-.secondary-button,.page-button,.quiet-button,.panel-anchor-nav a,.area-chip{
-  border-color:rgba(255,255,255,.98);
-  background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(182,223,231,.96) 55%,rgba(104,198,221,.46));
-  color:#0D1C26;
-  box-shadow:0 9px 18px rgba(12,39,60,.2),inset 0 2px 0 #fff,inset 0 -3px 5px rgba(12,57,111,.14);
-}
-.area-chip.selected{color:#fff}
-.decision.approve,.decision.corrections,.decision.reject{color:#fff}
-.badge,.keyword,.page-status,.demo-tag,.panel-anchor-nav a span{
-  border:1px solid rgba(255,255,255,.98);
-  background:linear-gradient(180deg,#fff 0%,#B6DFE7 65%,rgba(104,198,221,.68));
-  color:#0D1C26;
-  box-shadow:0 4px 10px rgba(12,57,111,.16),inset 0 2px 0 #fff;
-}
+.primary-button,.nav-link.active,.nav-link.login-link,.area-chip.selected,.decision{border:1px solid rgba(255,255,255,.38);background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(255,255,255,0) 42%),linear-gradient(145deg,#0D1C26,#0D1C26);color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.38);box-shadow:0 9px 20px rgba(4,16,23,.34),inset 0 2px 0 rgba(255,255,255,.58),inset 0 -3px 5px rgba(0,0,0,.24)}
+.secondary-button,.page-button,.quiet-button,.panel-anchor-nav a,.area-chip,.request-link,.dashboard-nav button{border:1px solid rgba(255,255,255,.54);background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(255,255,255,0) 42%),linear-gradient(145deg,#0D1C26,#0D1C26);color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.38);box-shadow:0 8px 18px rgba(4,16,23,.3),inset 0 2px 0 rgba(255,255,255,.52),inset 0 -3px 5px rgba(0,0,0,.22)}
+.area-chip.selected{border-color:#68C6DD;box-shadow:0 0 0 2px rgba(104,198,221,.4),0 9px 19px rgba(4,16,23,.34),inset 0 2px 0 rgba(255,255,255,.7)}
+.badge,.keyword,.page-status,.demo-tag{border:1px solid rgba(255,255,255,.98);background:linear-gradient(180deg,#fff 0%,#B6DFE7 65%,rgba(104,198,221,.68));color:#0D1C26;box-shadow:0 4px 10px rgba(12,57,111,.16),inset 0 2px 0 #fff}
 .type-badge{background:linear-gradient(180deg,#fff,#68C6DD);color:#0C396F}
 .site-footer{color:#0D1C26}
 .register-prompt{border-color:rgba(255,255,255,.9);background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(182,223,231,.9));box-shadow:0 10px 20px rgba(12,39,60,.17),inset 0 2px 0 #fff}
 .role-checks input,.check-option input{accent-color:#0C396F}
-.primary-button:hover,.nav-link.active:hover,.nav-link.login-link:hover,.decision:hover:not(:disabled){filter:brightness(1.13)}
-.secondary-button:hover,.page-button:hover:not(:disabled),.panel-anchor-nav a:hover,.area-chip:hover{filter:brightness(1.04)}
-.request-link{font-weight:800}
-.secondary-button,.page-button,.quiet-button,.panel-anchor-nav a,.area-chip,.dashboard-nav button,.request-link{
-  border-color:rgba(255,255,255,.54);
-  background:linear-gradient(180deg,rgba(255,255,255,.48),rgba(255,255,255,0) 42%),linear-gradient(145deg,#0D1C26,#0D1C26);
-  color:#fff;
-  text-shadow:0 1px 1px rgba(0,0,0,.38);
-  box-shadow:0 8px 18px rgba(4,16,23,.3),inset 0 2px 0 rgba(255,255,255,.52),inset 0 -3px 5px rgba(0,0,0,.22);
-}
-.panel-anchor-nav a span{background:linear-gradient(180deg,#68C6DD,#368BBF);color:#0D1C26}
-.area-chip.selected{border-color:#68C6DD;box-shadow:0 0 0 2px rgba(104,198,221,.4),0 9px 19px rgba(4,16,23,.34),inset 0 2px 0 rgba(255,255,255,.7)}
-.secondary-button.is-favorite{color:#B6DFE7}
-.intro-actions{display:flex;align-items:center;gap:13px;margin:17px 0 21px}
-.intro-actions span{color:#d4eaf0;font-size:12px;text-shadow:0 1px 2px rgba(4,25,43,.45)}
-.intro-actions .primary-button{min-height:45px}
+.intro-actions span{color:#d4eaf0;text-shadow:0 1px 2px rgba(4,25,43,.45)}
 .intro .eyebrow,.intro h1,.intro-copy{color:#fff;text-shadow:0 2px 6px rgba(3,22,41,.5)}
 .intro .eyebrow{color:#d9f7ff}
 .register-prompt p{color:#0D1C26}
+.request-link{font-weight:800}
 @media(max-width:560px){.intro-actions{align-items:flex-start;flex-direction:column}.intro-actions .primary-button{width:100%;min-height:47px}}
