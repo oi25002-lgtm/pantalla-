@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIS | Repositorio Digital — Vista previa</title>
+    <link rel="stylesheet" href="vista-previa.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="glass">
+      <a class="brand" href="#inicio"><img src="public/ues-escudo.png" alt="Escudo de la Universidad de El Salvador"><span><strong>SIS | Repositorio Digital</strong><small>Ingeniería de Sistemas Informáticos · UES FMO</small></span></a>
+      <nav aria-label="Navegación"><a class="active" href="#inicio">Inicio</a><a href="#catalogo">Explorar proyectos</a><a href="#areas">Áreas</a><a href="#acerca">Acerca de</a><a class="login" href="#acceso">Iniciar sesión</a></nav>
+    </header>
+    <main id="inicio">
+      <section class="intro">
+        <p class="eyebrow">REPOSITORIO ACADÉMICO</p><h1>Proyectos y trabajos de grado</h1>
+        <p class="intro-copy">Consulta los trabajos de Ingeniería de Sistemas Informáticos que ya fueron<br class="desktop"> revisados y cuentan con autorización de difusión.</p>
+        <div class="search"><label class="input-wrap"><span class="search-icon">⌕</span><input id="q" type="search" placeholder="Título, autor, tema o palabra clave..."></label><select class="select" aria-label="Campo de búsqueda"><option>Todos los campos</option><option>Título</option><option>Autor</option><option>Tema</option></select></div>
+        <div class="areas" id="areas"><strong>Explorar por<br>área</strong><button class="area-chip" data-area="Bases de datos">Bases de datos</button><button class="area-chip" data-area="Desarrollo web">Desarrollo web</button><button class="area-chip" data-area="Redes y Comunicación">Redes y Comunicación</button><button class="area-chip" data-area="Inteligencia artificial">Inteligencia artificial</button></div>
+      </section>
+      <section class="layout" id="catalogo">
+        <aside class="filters glass"><div class="filter-head"><h2>Filtrar resultados</h2><button id="clear">Limpiar</button></div>
+          <details class="filter-group"><summary>Año</summary><div class="opts"><label><input type="checkbox">2025</label><label><input type="checkbox">2024</label><label><input type="checkbox">2023</label></div></details>
+          <details class="filter-group" open><summary>Área temática</summary><div class="opts"><label><input type="checkbox" data-check-area="Bases de datos">Bases de datos</label><label><input type="checkbox" data-check-area="Desarrollo web">Desarrollo web</label><label><input type="checkbox" data-check-area="Redes y Comunicación">Redes y Comunicación</label><label><input type="checkbox" data-check-area="Inteligencia artificial">Inteligencia artificial</label><label><input type="checkbox">Otros</label></div></details>
+          <details class="filter-group"><summary>Tipo de trabajo</summary><div class="opts"><label><input type="checkbox">[Tipo de trabajo]</label></div></details><details class="filter-group"><summary>Carrera</summary><div class="opts"><label><input type="checkbox">[Carrera]</label></div></details><details class="filter-group"><summary>Asignatura</summary><div class="opts"><label><input type="checkbox">[Asignatura]</label></div></details>
+        </aside>
+        <div>
+          <div class="toolbar"><p class="counter">3 trabajos encontrados</p><label class="sort">Ordenar por <select><option>Más recientes</option><option>Más antiguos</option></select></label></div>
+          <div class="cards" id="cards">
+            <article class="card glass" data-card-area="Bases de datos"><div class="card-top"><div class="badges"><span class="badge type">[Tipo de trabajo]</span><span class="badge">Bases de datos</span></div><strong>2025</strong></div><h2>[Título del trabajo 1]</h2><div class="details"><div><small>Autores</small><b>[Autor 1], [Autor 2]</b></div><div><small>Docente</small><b>[Docente]</b></div><div><small>Carrera</small><b>[Carrera]</b></div></div><p class="summary">[Resumen del trabajo, dos o tres líneas de texto que ayudan a decidir si es el trabajo que se busca.]</p><div class="keywords"><strong>Palabras clave</strong><span>[palabra clave]</span><span>[palabra clave]</span><span>[palabra clave]</span></div><div class="actions"><button class="primary">Ver ficha del trabajo</button><button class="secondary favorite">♧ Guardar en favoritos</button></div></article>
+            <article class="card glass" data-card-area="Desarrollo web"><div class="card-top"><div class="badges"><span class="badge type">[Tipo de trabajo]</span><span class="badge">Desarrollo web</span></div><strong>2024</strong></div><h2>[Título del trabajo 2]</h2><div class="details"><div><small>Autores</small><b>[Autor 1], [Autor 2]</b></div><div><small>Docente</small><b>[Docente]</b></div><div><small>Carrera</small><b>[Carrera]</b></div></div><p class="summary">[Resumen del trabajo, dos o tres líneas de texto que ayudan a decidir si es el trabajo que se busca.]</p><div class="keywords"><strong>Palabras clave</strong><span>[palabra clave]</span><span>[palabra clave]</span><span>[palabra clave]</span></div><div class="actions"><button class="primary">Ver ficha del trabajo</button><button class="secondary favorite">♧ Guardar en favoritos</button></div></article>
+            <article class="card glass" data-card-area="Redes y Comunicación"><div class="card-top"><div class="badges"><span class="badge type">[Tipo de trabajo]</span><span class="badge">Redes y Comunicación</span></div><strong>2023</strong></div><h2>[Título del trabajo 3]</h2><div class="details"><div><small>Autores</small><b>[Autor 1], [Autor 2]</b></div><div><small>Docente</small><b>[Docente]</b></div><div><small>Carrera</small><b>[Carrera]</b></div></div><p class="summary">[Resumen del trabajo, dos o tres líneas de texto que ayudan a decidir si es el trabajo que se busca.]</p><div class="keywords"><strong>Palabras clave</strong><span>[palabra clave]</span><span>[palabra clave]</span><span>[palabra clave]</span></div><div class="actions"><button class="primary">Ver ficha del trabajo</button><button class="secondary favorite">♧ Guardar en favoritos</button></div></article>
+          </div><p class="notice">Vista previa con datos de ejemplo. La versión Angular se ejecuta con npm y luego se conectará a la API.</p>
+          <div class="page"><button disabled>← Anterior</button><span>Página 1 de 1</span><button disabled>Siguiente →</button></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer glass" id="acerca"><strong>SIS | Repositorio Digital</strong><span>Universidad de El Salvador · Facultad Multidisciplinaria Oriental</span></footer>
+  </div>
+    <script src="vista-previa.js" defer></script>
+</body>
+</html>
