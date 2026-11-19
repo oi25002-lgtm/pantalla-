@@ -1,0 +1,92 @@
+@if (active()) {
+  <header class="topbar glass-panel">
+    <a class="brand" href="#inicio" aria-label="SIS Repositorio Digital, inicio">
+      <img class="ues-crest" src="ues-escudo.png" alt="Escudo de la Universidad de El Salvador" />
+      <span class="brand-copy"><strong>SIS | Repositorio Digital</strong><small>Ingeniería de Sistemas Informáticos · UES FMO</small></span>
+    </a>
+<nav class="main-nav" aria-label="Navegación principal">
+  <a class="nav-link active" href="#inicio">Inicio</a>
+  <a class="nav-link" href="#catalogo">Explorar proyectos</a>
+  <a class="nav-link" href="#areas">Áreas</a>
+  <a class="nav-link" href="#acerca">Acerca de</a>
+</nav>
+
+<div class="topbar-actions">
+  <button type="button" class="secondary-button" (click)="openNotifications()">
+    Notificaciones
+  </button>
+
+  <button type="button" class="primary-button" (click)="navigateTo.emit('requester')">
+    Subir proyecto
+  </button>
+
+  <button type="button" class="quiet-button" (click)="navigateTo.emit('login')">
+    Iniciar sesión
+  </button>
+</div>
+  </header>
+  <main id="inicio">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">REPOSITORIO ACADÉMICO</p><h1 id="page-title">Proyectos y trabajos de grado</h1>
+      <p class="intro-copy">Consulta trabajos de Ingeniería de Sistemas Informáticos revisados y autorizados para su difusión.</p>
+     
+     
+      <form class="search-row" role="search" (submit)="$event.preventDefault()">
+        <label class="sr-only" for="project-search">Buscar trabajos académicos</label><div class="search-control"><span class="search-icon" aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Título, autor, resumen o palabra clave..." [ngModel]="query()" (ngModelChange)="query.set($event); page.set(1)" name="query" /></div>
+        <label class="sr-only" for="search-scope">Campo de búsqueda</label><select id="search-scope" class="scope-select" [ngModel]="searchScope()" (ngModelChange)="searchScope.set($event); page.set(1)" name="scope"><option value="all">Todos los campos</option><option value="title">Título</option><option value="author">Autor</option><option value="topic">Resumen y palabras clave</option></select>
+      </form>
+      <div class="area-shortcuts" id="areas"><strong>Explorar por<br />área</strong>@for (area of areas(); track area) {<button type="button" class="area-chip glass-panel" [class.selected]="isSelected(selectedAreas, area)" [attr.aria-pressed]="isSelected(selectedAreas, area)" (click)="toggleSelection(selectedAreas, area)">{{ area }}</button>}</div>
+    </section>
+    @if (actionNotice()) { <p class="inline-notice action-banner" role="status">{{ actionNotice() }}</p> }
+    <section class="catalog-layout" id="catalogo" aria-label="Catálogo de trabajos">
+      <aside class="filters glass-panel" aria-label="Filtros de búsqueda">
+        <button
+  type="button"
+  class="filter-toggle"
+  aria-controls="filter-content"
+  [attr.aria-expanded]="filtersOpen()"
+  (click)="filtersOpen.set(!filtersOpen())"
+>
+  Filtrar resultados
+  <span aria-hidden="true">{{ filtersOpen() ? '−' : '+' }}</span>
+</button>
+
+<div id="filter-content" class="filter-content" [hidden]="!filtersOpen()">
+  <button type="button" class="clear-button" (click)="clearFilters()">
+    Limpiar
+  </button>
+        <details class="filter-group"><summary>Año</summary><div class="filter-options">@for (year of years(); track year) {<label class="check-option"><input type="checkbox" [checked]="isSelected(selectedYears, year)" (change)="toggleSelection(selectedYears, year)" /><span>{{ year }}</span></label>}</div></details>
+        <details class="filter-group" open><summary>Área temática</summary><div class="filter-options">@for (area of areas(); track area) {<label class="check-option"><input type="checkbox" [checked]="isSelected(selectedAreas, area)" (change)="toggleSelection(selectedAreas, area)" /><span>{{ area }}</span></label>}</div></details>
+        <details class="filter-group"><summary>Tipo de trabajo</summary><div class="filter-options">@for (type of types(); track type) {<label class="check-option"><input type="checkbox" [checked]="isSelected(selectedTypes, type)" (change)="toggleSelection(selectedTypes, type)" /><span>{{ type }}</span></label>}</div></details>
+        <details class="filter-group"><summary>Carrera</summary><div class="filter-options">@for (career of careers(); track career) {<label class="check-option"><input type="checkbox" [checked]="isSelected(selectedCareers, career)" (change)="toggleSelection(selectedCareers, career)" /><span>{{ career }}</span></label>}</div></details>
+        <details class="filter-group"><summary>Asignatura</summary><div class="filter-options">@for (subject of subjects(); track subject) {<label class="check-option"><input type="checkbox" [checked]="isSelected(selectedSubjects, subject)" (change)="toggleSelection(selectedSubjects, subject)" /><span>{{ subject }}</span></label>}</div></details>
+        <details class="filter-group"><summary>Autor</summary><div class="filter-options">@for (author of authors(); track author) {<label class="check-option"><input type="checkbox" [checked]="isSelected(selectedAuthors, author)" (change)="toggleSelection(selectedAuthors, author)" /><span>{{ author }}</span></label>}</div></details>
+        <button type="button" class="secondary-button favorite-filter" [class.is-favorite]="favoritesOnly()" [attr.aria-pressed]="favoritesOnly()" (click)="favoritesOnly.set(!favoritesOnly()); page.set(1)">{{ favoritesOnly() ? 'Ver todo el catálogo' : 'Ver mis favoritos' }}</button>
+        </div>
+      </aside>
+      <div class="results-column">
+        <div class="results-toolbar"><p class="count-badge glass-panel">{{ filteredWorks().length }} {{ filteredWorks().length === 1 ? 'trabajo encontrado' : 'trabajos encontrados' }}</p><label class="sort-control glass-panel"><span>Ordenar por</span><select [ngModel]="sortOrder()" (ngModelChange)="sortOrder.set($event); page.set(1)" name="sortOrder" aria-label="Ordenar resultados"><option value="recent">Más recientes</option><option value="old">Más antiguos</option></select></label></div>
+        <div class="work-list">
+          @for (work of pageWorks(); track work.id) {
+            <article class="work-card glass-panel"><div class="card-topline"><div class="badges">@if (work.featured) {<span class="badge featured-badge">Destacado</span>}<span class="badge type-badge">{{ work.type }}</span><span class="badge area-badge">{{ work.area }}</span></div><strong class="work-year">{{ work.year }}</strong></div>
+              <h2>{{ work.title }}</h2><dl class="work-details"><div><dt>Autores</dt><dd>{{ work.authors.join(', ') }}</dd></div>@if (work.advisor && work.advisorAllowed) {<div><dt>Docente</dt><dd>{{ work.advisor }}</dd></div>}<div><dt>Carrera</dt><dd>{{ work.career }}</dd></div></dl>
+              <p class="summary">{{ work.summary }}</p><div class="keywords-row"><strong>Palabras clave</strong><div class="keywords">@for (keyword of work.keywords; track $index) {<span class="keyword">{{ keyword }}</span>}</div></div>
+              <div class="card-actions"><button type="button" class="primary-button" (click)="openWork(work)">Ver ficha del trabajo</button><button type="button" class="secondary-button" [class.is-favorite]="favoriteIds().includes(work.id)" [attr.aria-pressed]="favoriteIds().includes(work.id)" (click)="toggleFavorite(work.id)"><span aria-hidden="true">{{ favoriteIds().includes(work.id) ? '★' : '☆' }}</span>{{ favoriteIds().includes(work.id) ? 'Guardado' : 'Guardar en favoritos' }}</button><button type="button" class="secondary-button" (click)="shareWork(work)">Compartir ficha</button></div>
+            </article>
+          } @empty {<div class="empty-state glass-panel"><h2>No encontramos trabajos con esos criterios</h2><p>Prueba cambiando la búsqueda o quitando alguno de los filtros.</p><button type="button" class="secondary-button" (click)="clearFilters()">Limpiar filtros</button></div>}
+        </div>
+        <nav class="pagination" aria-label="Paginación del catálogo"><button type="button" class="page-button" [disabled]="page() <= 1" (click)="movePage(-1)">← Anterior</button><span class="page-status">Página {{ page() }} de {{ pageCount() }} · hasta 10 trabajos</span><button type="button" class="page-button" [disabled]="page() >= pageCount()" (click)="movePage(1)">Siguiente →</button></nav>
+      </div>
+    </section>
+    <footer class="site-footer glass-panel" id="acerca"><strong>SIS | Repositorio Digital</strong><span>Universidad de El Salvador · Facultad Multidisciplinaria Oriental</span><button class="quiet-button" type="button" (click)="navigateTo.emit('login')">Acceso de gestión</button></footer>
+  </main>
+}
+
+@if (selectedWork(); as work) {
+  <div class="dialog-backdrop" (click)="closeWork()" (keydown.escape)="closeWork()" tabindex="-1"><section class="work-dialog glass-panel" role="dialog" aria-modal="true" aria-labelledby="dialog-title" (click)="$event.stopPropagation()"><button type="button" class="dialog-close" aria-label="Cerrar ficha" (click)="closeWork()">×</button>
+    <span class="badge type-badge">{{ work.type }}</span><h2 id="dialog-title">{{ work.title }}</h2><p>{{ work.summary }}</p><dl class="dialog-details"><div><dt>Autores</dt><dd>{{ work.authors.join(', ') }}</dd></div><div><dt>Año</dt><dd>{{ work.year }}</dd></div><div><dt>Carrera</dt><dd>{{ work.career }}</dd></div><div><dt>Área temática</dt><dd>{{ work.area }}</dd></div>@if (work.subject) {<div><dt>Asignatura</dt><dd>{{ work.subject }}</dd></div>}@if (work.advisor && work.advisorAllowed) {<div><dt>Docente asesor</dt><dd>{{ work.advisor }}</dd></div>}</dl>
+    @if (work.permission === 'Solo ficha') {<p class="inline-notice">La difusión autorizada comprende únicamente los datos de esta ficha. No hay archivos ni enlaces públicos.</p>}
+    @if (work.permission === 'Ficha y materiales autorizados') {<section class="authorized-resources"><h3>Materiales disponibles</h3>@for (resource of work.resources; track resource.id) {@if (permissionAllowsResource(work, resource.id)) {<a class="resource-link" [href]="resource.href" target="_blank" rel="noopener">{{ resource.kind === 'PDF' ? 'Abrir PDF' : resource.kind === 'ZIP' ? 'Descargar ZIP' : 'Abrir enlace autorizado' }} · {{ resource.name }}</a>}}@empty {<p>No hay materiales autorizados para esta ficha.</p>}</section>}
+    <div class="card-actions"><button type="button" class="secondary-button" (click)="shareWork(work)">Compartir ficha</button></div><p class="prototype-note">Prototipo visual con datos de muestra. Autenticación, almacenamiento y control real de archivos requieren la API y la base de datos.</p>
+  </section></div>
+}

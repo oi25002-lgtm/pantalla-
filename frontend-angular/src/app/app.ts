@@ -1,6 +1,8 @@
 import { Component, computed, OnInit, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { Catalogo } from './catalogo/catalogo';
+
 type Screen = 'catalog' | 'login' | 'register' | 'admin' | 'supervisor' | 'requester';
 type UserRole = 'Administrador' | 'Supervisor' | 'Lector';
 type ReviewStatus = 'Pendiente' | 'Aprobada' | 'Con correcciones' | 'Rechazada';
@@ -28,7 +30,7 @@ interface WorkData {
   advisorAllowed: boolean;
 }
 
-interface Work extends WorkData {
+export interface Work extends WorkData {
   id: number;
   permission: PermissionMode;
   approvedResourceIds: number[];
@@ -160,7 +162,7 @@ function makeDemoDeliveries(): Delivery[] {
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule],
+  imports: [FormsModule, Catalogo],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
