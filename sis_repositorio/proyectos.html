@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de proyectos académicos de Ingeniería de Sistemas Informáticos.">
+  <title>Explorar proyectos | SIS Repositorio Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="proyectos.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SIS Repositorio Digital, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 80 60"><path d="M40 3 46 20 63 26 46 32 40 49 34 32 17 26 34 20Z" fill="currentColor"/><path d="M7 42c11-2 20 1 33 10 13-9 22-12 33-10M11 50c10-1 19 2 29 8 10-6 19-9 29-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-divider"></span>
+      <span class="brand-name">SIS <span>|</span> Repositorio Digital</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="index.html">⌂ <span>Inicio</span></a>
+      <a class="nav-link active" href="proyectos.html">▰ <span>Explorar proyectos</span></a>
+      <a class="nav-link" href="#catalogo">▦ <span>Áreas</span></a>
+      <a class="nav-link" href="#acerca">● <span>Acerca de</span></a>
+    </nav>
+    <a class="login-button" href="#iniciar-sesion"><span aria-hidden="true">♟</span> Iniciar sesión</a>
+  </header>
+
+  <main class="catalog-page">
+    <section class="catalog-hero">
+      <div class="catalog-hero-copy">
+        <a class="breadcrumb" href="index.html">Inicio <span>›</span> Explorar proyectos</a>
+        <span class="eyebrow"><span class="eyebrow-dot"></span> CATÁLOGO ACADÉMICO</span>
+        <h1>Explora el conocimiento<br><span>sin límites</span></h1>
+        <p>Encuentra tesis, proyectos de graduación e investigaciones desarrolladas en Ingeniería de Sistemas Informáticos.</p>
+      </div>
+      <div class="catalog-hero-art" aria-hidden="true">
+        <div class="hero-art-circle"></div>
+        <div class="hero-doc doc-back"><span></span><span></span><span></span><i></i></div>
+        <div class="hero-doc doc-front"><b>✦</b><span></span><span></span><span></span><i></i></div>
+        <div class="hero-art-spark spark-a">✦</div><div class="hero-art-spark spark-b">✧</div>
+      </div>
+    </section>
+
+    <section class="catalog-layout" id="catalogo">
+      <aside class="catalog-filters" aria-label="Filtros de proyectos">
+        <div class="filter-topline"><h2><span>☷</span> Filtros</h2><button type="button" id="reset-filters">Limpiar</button></div>
+        <div class="filter-block">
+          <h3>Área temática <span>−</span></h3>
+          <label><input type="checkbox" name="area" value="Desarrollo web"> <span>Desarrollo web</span><small>18</small></label>
+          <label><input type="checkbox" name="area" value="Bases de datos"> <span>Bases de datos</span><small>14</small></label>
+          <label><input type="checkbox" name="area" value="Redes"> <span>Redes y comunicación</span><small>12</small></label>
+          <label><input type="checkbox" name="area" value="Inteligencia artificial"> <span>Inteligencia artificial</span><small>9</small></label>
+          <label><input type="checkbox" name="area" value="Seguridad informática"> <span>Seguridad informática</span><small>8</small></label>
+          <label><input type="checkbox" name="area" value="Sistemas de información"> <span>Sistemas de información</span><small>7</small></label>
+        </div>
+        <div class="filter-block">
+          <h3>Año de publicación <span>−</span></h3>
+          <label><input type="checkbox" name="year" value="2025-2026"> <span>2025 – 2026</span><small>16</small></label>
+          <label><input type="checkbox" name="year" value="2021-2024"> <span>2021 – 2024</span><small>29</small></label>
+          <label><input type="checkbox" name="year" value="2017-2020"> <span>2017 – 2020</span><small>19</small></label>
+          <label><input type="checkbox" name="year" value="2016-older"> <span>2016 y anteriores</span><small>12</small></label>
+        </div>
+        <div class="filter-block">
+          <h3>Tipo de proyecto <span>−</span></h3>
+          <label><input type="checkbox" name="type" value="Tesis"> <span>Tesis</span></label>
+          <label><input type="checkbox" name="type" value="Proyecto de Graduación"> <span>Proyecto de graduación</span></label>
+          <label><input type="checkbox" name="type" value="Investigación"> <span>Investigación</span></label>
+        </div>
+        <div class="filter-block">
+          <h3>Disponibilidad <span>−</span></h3>
+          <label><input type="checkbox" name="availability" value="Documento disponible"> <span>Con documento disponible</span></label>
+          <label><input type="checkbox" name="availability" value="Resumen disponible"> <span>Solo resumen</span></label>
+        </div>
+        <div class="filter-note"><span>ⓘ</span><p>Combina filtros para encontrar proyectos que se ajusten a tu tema de interés.</p></div>
+      </aside>
+
+      <div class="catalog-results">
+        <div class="catalog-title-row">
+          <div><span class="eyebrow small-eyebrow">BIBLIOTECA DIGITAL</span><h2>Catálogo de proyectos</h2><p>Consulta y descubre trabajos académicos de la carrera.</p></div>
+          <div class="catalog-view-switch" aria-label="Modo de visualización"><button class="view-switch active" type="button" aria-label="Vista de tarjetas">▦</button><button class="view-switch" type="button" aria-label="Vista de lista" title="Vista de lista">☷</button></div>
+        </div>
+
+        <form class="advanced-search" id="catalog-search-form" role="search">
+          <span class="advanced-search-icon" aria-hidden="true">⌕</span>
+          <label class="sr-only" for="catalog-search">Buscar en el catálogo</label>
+          <input id="catalog-search" type="search" placeholder="Busca por título, autor, palabra clave o año...">
+          <button type="submit">Buscar proyectos <span>→</span></button>
+        </form>
+        <div class="search-hints"><span>Búsquedas populares:</span><button type="button" data-query="sistema web">sistema web</button><button type="button" data-query="base de datos">base de datos</button><button type="button" data-query="redes">redes</button></div>
+
+        <div class="results-toolbar">
+          <p id="catalog-count" aria-live="polite"><strong>Mostrando 6 proyectos</strong> <span>de ejemplo</span></p>
+          <label class="sort-control" for="sort-projects">Ordenar por
+            <select id="sort-projects">
+              <option value="relevance">Relevancia</option>
+              <option value="newest">Más recientes</option>
+              <option value="oldest">Más antiguos</option>
+              <option value="title">Título: A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="active-filters" id="active-filters" hidden></div>
+        <div class="catalog-grid" id="catalog-grid">
+          <article class="catalog-card" data-area="Desarrollo web" data-year="2025" data-type="Proyecto de Graduación" data-availability="Documento disponible" data-title="Sistema web para la gestión académica" data-search="sistema web gestión académica maria lopez procesos académicos plataforma facultad">
+            <div class="catalog-card-art art-web"><span class="art-tag">PROYECTO DE GRADUACIÓN</span><div class="mini-browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-content"><b></b><span></span><span></span><div class="browser-chart"><i></i><i></i><i></i><i></i></div></div></div><span class="art-decoration">✦</span></div>
+            <div class="catalog-card-body"><div class="card-label-row"><span class="area-label">Desarrollo web</span><button class="favorite-button" type="button" aria-label="Guardar en favoritos" aria-pressed="false">♡</button></div><h3>Sistema web para la gestión académica</h3><div class="card-author"><span class="author-avatar">ML</span><span><small>Autor/a</small><b>María López</b></span><span class="meta-divider"></span><span class="year-meta">▣ 2025</span></div><p>Plataforma web orientada a optimizar los procesos académicos y facilitar la consulta de información institucional.</p><div class="card-footer"><span class="availability available">● Documento disponible</span><a href="detalle-proyecto.html?id=1">Ver detalles <b>→</b></a></div></div>
+          </article>
+
+          <article class="catalog-card" data-area="Bases de datos" data-year="2026" data-type="Investigación" data-availability="Documento disponible" data-title="Análisis de datos para la toma de decisiones" data-search="análisis datos toma decisiones carlos mendez base de datos inteligencia empresarial">
+            <div class="catalog-card-art art-data"><span class="art-tag">INVESTIGACIÓN</span><div class="database-illustration"><div class="db-cylinder"><i></i><i></i><i></i></div><div class="db-chart"><span></span><span></span><span></span><span></span><b>↗</b></div></div><span class="art-decoration">✧</span></div>
+            <div class="catalog-card-body"><div class="card-label-row"><span class="area-label">Bases de datos</span><button class="favorite-button" type="button" aria-label="Guardar en favoritos" aria-pressed="false">♡</button></div><h3>Análisis de datos para la toma de decisiones</h3><div class="card-author"><span class="author-avatar">CM</span><span><small>Autor/a</small><b>Carlos Méndez</b></span><span class="meta-divider"></span><span class="year-meta">▣ 2026</span></div><p>Estudio de técnicas de análisis de datos para apoyar decisiones estratégicas en entornos académicos.</p><div class="card-footer"><span class="availability available">● Documento disponible</span><a href="detalle-proyecto.html?id=2">Ver detalles <b>→</b></a></div></div>
+          </article>
+
+          <article class="catalog-card" data-area="Redes" data-year="2024" data-type="Tesis" data-availability="Resumen disponible" data-title="Plataforma de monitoreo de redes" data-search="plataforma monitoreo redes ana torres detección fallas comunicación infraestructura">
+            <div class="catalog-card-art art-network"><span class="art-tag">TESIS</span><div class="network-illustration"><span class="node node-a">⌘</span><span class="node node-b">▣</span><span class="node node-c">⌁</span><span class="node node-d">▤</span><i class="line line-a"></i><i class="line line-b"></i><i class="line line-c"></i></div><span class="art-decoration">✦</span></div>
+            <div class="catalog-card-body"><div class="card-label-row"><span class="area-label">Redes y comunicación</span><button class="favorite-button" type="button" aria-label="Guardar en favoritos" aria-pressed="false">♡</button></div><h3>Plataforma de monitoreo de redes</h3><div class="card-author"><span class="author-avatar">AT</span><span><small>Autor/a</small><b>Ana Torres</b></span><span class="meta-divider"></span><span class="year-meta">▣ 2024</span></div><p>Sistema de monitoreo para visualizar el estado de una red y apoyar la detección temprana de fallas.</p><div class="card-footer"><span class="availability summary">● Solo resumen</span><a href="detalle-proyecto.html?id=3">Ver detalles <b>→</b></a></div></div>
+          </article>
+
+          <article class="catalog-card" data-area="Inteligencia artificial" data-year="2023" data-type="Proyecto de Graduación" data-availability="Documento disponible" data-title="Asistente virtual para consultas universitarias" data-search="asistente virtual consultas universitarias inteligencia artificial chatbot estudiantes">
+            <div class="catalog-card-art art-ai"><span class="art-tag">PROYECTO DE GRADUACIÓN</span><div class="ai-illustration"><div class="ai-core">✦</div><i class="ai-orbit orbit-one"></i><i class="ai-orbit orbit-two"></i><span class="ai-dot dot-one"></span><span class="ai-dot dot-two"></span></div><span class="art-decoration">✧</span></div>
+            <div class="catalog-card-body"><div class="card-label-row"><span class="area-label">Inteligencia artificial</span><button class="favorite-button" type="button" aria-label="Guardar en favoritos" aria-pressed="false">♡</button></div><h3>Asistente virtual para consultas universitarias</h3><div class="card-author"><span class="author-avatar">JR</span><span><small>Autor/a</small><b>José Rivera</b></span><span class="meta-divider"></span><span class="year-meta">▣ 2023</span></div><p>Propuesta de asistente conversacional para orientar a estudiantes sobre trámites y servicios universitarios.</p><div class="card-footer"><span class="availability available">● Documento disponible</span><a href="detalle-proyecto.html?id=4">Ver detalles <b>→</b></a></div></div>
+          </article>
+
+          <article class="catalog-card" data-area="Seguridad informática" data-year="2021" data-type="Tesis" data-availability="Resumen disponible" data-title="Buenas prácticas de seguridad informática" data-search="seguridad informática buenas prácticas análisis riesgos protección información karla cruz">
+            <div class="catalog-card-art art-security"><span class="art-tag">TESIS</span><div class="shield-illustration"><div class="shield">✓</div><span class="shield-ring"></span><span class="shield-spark">✦</span></div><span class="art-decoration">✦</span></div>
+            <div class="catalog-card-body"><div class="card-label-row"><span class="area-label">Seguridad informática</span><button class="favorite-button" type="button" aria-label="Guardar en favoritos" aria-pressed="false">♡</button></div><h3>Buenas prácticas de seguridad informática</h3><div class="card-author"><span class="author-avatar">KC</span><span><small>Autor/a</small><b>Karla Cruz</b></span><span class="meta-divider"></span><span class="year-meta">▣ 2021</span></div><p>Revisión de prácticas para reducir riesgos y fortalecer la protección de información en organizaciones.</p><div class="card-footer"><span class="availability summary">● Solo resumen</span><a href="detalle-proyecto.html?id=5">Ver detalles <b>→</b></a></div></div>
+          </article>
+
+          <article class="catalog-card" data-area="Sistemas de información" data-year="2019" data-type="Investigación" data-availability="Documento disponible" data-title="Sistema de inventario para recursos tecnológicos" data-search="sistema inventario recursos tecnológicos sistemas información bodega equipo">
+            <div class="catalog-card-art art-systems"><span class="art-tag">INVESTIGACIÓN</span><div class="inventory-illustration"><div class="inventory-box box-one">▤</div><div class="inventory-box box-two">▦</div><div class="inventory-box box-three">▣</div><div class="inventory-base"></div></div><span class="art-decoration">✧</span></div>
+            <div class="catalog-card-body"><div class="card-label-row"><span class="area-label">Sistemas de información</span><button class="favorite-button" type="button" aria-label="Guardar en favoritos" aria-pressed="false">♡</button></div><h3>Sistema de inventario para recursos tecnológicos</h3><div class="card-author"><span class="author-avatar">DP</span><span><small>Autor/a</small><b>Daniela Pérez</b></span><span class="meta-divider"></span><span class="year-meta">▣ 2019</span></div><p>Herramienta para registrar, organizar y consultar los recursos tecnológicos de una institución.</p><div class="card-footer"><span class="availability available">● Documento disponible</span><a href="detalle-proyecto.html?id=6">Ver detalles <b>→</b></a></div></div>
+          </article>
+        </div>
+
+        <div class="no-results" id="no-results" hidden><span>⌕</span><h3>No encontramos proyectos</h3><p>Intenta con otra palabra o modifica los filtros seleccionados.</p><button type="button" id="reset-empty">Limpiar búsqueda y filtros</button></div>
+        <nav class="pagination" aria-label="Paginación de proyectos"><button type="button" class="page-arrow" disabled aria-label="Página anterior">‹</button><button type="button" class="page-number selected" aria-current="page">1</button><button type="button" class="page-number" disabled>2</button><button type="button" class="page-number" disabled>3</button><span>…</span><button type="button" class="page-number" disabled>12</button><button type="button" class="page-arrow" disabled aria-label="Página siguiente">›</button><label>Mostrar <select id="page-size"><option>6</option><option>9</option><option>12</option></select> por página</label></nav>
+        <p class="demo-note">Vista de demostración: los proyectos y conteos mostrados son datos ficticios de ejemplo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="acerca">
+    <a class="footer-brand" href="index.html"><span class="footer-mark">✦</span><span>SIS | Repositorio Digital</span></a>
+    <span class="footer-divider"></span>
+    <p>Repositorio académico · Ingeniería de Sistemas</p>
+    <span class="footer-decoration" aria-hidden="true"></span>
+  </footer>
+  <script src="proyectos.js"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    menuToggle?.addEventListener('click', () => {
+      const nav = document.querySelector('.main-nav');
+      const open = nav.classList.toggle('nav-open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+  </script>
+</body>
+</html>

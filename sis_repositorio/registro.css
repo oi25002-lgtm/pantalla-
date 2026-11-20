@@ -1,0 +1,28 @@
+/* Estilos adicionales exclusivos de la pantalla de registro */
+.register-main { justify-content: center; }
+.register-card {
+  width: min(880px, 100%); padding: clamp(28px, 5vw, 56px);
+  border: 1px solid rgba(255,255,255,.9); border-radius: 24px;
+  background: rgba(255,255,255,.97); box-shadow: 0 18px 45px rgba(35,72,130,.18);
+}
+.register-heading { text-align: center; margin-bottom: 28px; }
+.register-heading .auth-eyebrow { color: #367ADF; }
+.register-heading h1 { margin: 12px 0 8px; color: #2b437b; font: 800 clamp(30px, 4vw, 42px)/1.2 "Playfair Display", Georgia, serif; }
+.register-heading p { margin: 0; color: #526b91; }
+.register-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px 20px; }
+.register-grid label { display: grid; gap: 7px; color: #2e4778; font-size: 13px; font-weight: 700; }
+.register-grid input, .register-grid select {
+  width: 100%; min-height: 48px; padding: 0 13px; border: 1px solid #b4c9eb;
+  border-radius: 11px; color: #273d68; background: #fff; font: 500 14px "DM Sans", Arial, sans-serif;
+}
+.register-grid input:focus, .register-grid select:focus { outline: 3px solid rgba(54,122,223,.13); border-color: #367ADF; }
+.terms-check { display: flex; align-items: center; gap: 9px; margin: 22px 0; color: #415879; font-size: 13px; }
+.terms-check input { accent-color: #367ADF; width: 16px; height: 16px; }
+.register-form .submit-button { width: 100%; font-family: "DM Sans", Arial, sans-serif; font-size: 17px; }
+.register-form .submit-button span { font-size: 22px; }
+.register-login { text-align: center; margin: 22px 0 0; color: #526b91; }
+.register-login a { color: #236bd1; font-weight: 700; text-decoration: none; }
+@media (max-width: 620px) {
+  .register-card { padding: 28px 20px; }
+  .register-grid { grid-template-columns: 1fr; gap: 14px; }
+}

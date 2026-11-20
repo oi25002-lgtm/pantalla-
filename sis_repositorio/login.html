@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acceso al Repositorio Digital de Ingeniería de Sistemas Informáticos.">
+  <title>Iniciar sesión | SIS Repositorio Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="auth-page">
+  <header class="site-header auth-header">
+    <a class="brand" href="index.html" aria-label="SIS Repositorio Digital, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 80 60"><path d="M40 3 46 20 63 26 46 32 40 49 34 32 17 26 34 20Z" fill="currentColor"/><path d="M7 42c11-2 20 1 33 10 13-9 22-12 33-10M11 50c10-1 19 2 29 8 10-6 19-9 29-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-divider"></span>
+      <span class="brand-name">SIS <span>|</span> Repositorio Digital</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="index.html">⌂ <span>Inicio</span></a>
+      <a class="nav-link" href="proyectos.html">⌕ <span>Explorar proyectos</span></a>
+      <a class="nav-link" href="index.html#areas">▦ <span>Áreas</span></a>
+      <a class="nav-link" href="index.html#acerca">● <span>Acerca de</span></a>
+    </nav>
+    <a class="login-button active" href="login.html">♟ <span>Iniciar sesión</span></a>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-shell" aria-label="Acceso al repositorio">
+      <aside class="auth-welcome">
+        <span class="auth-eyebrow">SIS · REPOSITORIO ACADÉMICO</span>
+        <h1>Bienvenido al<br><span>Repositorio Digital</span></h1>
+        <p>Accede a investigaciones y proyectos académicos de la Facultad de Ingeniería de Sistemas Informáticos.</p>
+        <div class="auth-illustration" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="float-doc doc-one">▤</div><div class="float-doc doc-two">▱</div>
+          <div class="float-cloud">↓</div>
+          <svg viewBox="0 0 520 310" class="auth-laptop">
+            <defs>
+              <linearGradient id="screenFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf7ff"/><stop offset="1" stop-color="#8fc9ff"/></linearGradient>
+              <linearGradient id="laptopBase" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#d4eaff"/><stop offset="1" stop-color="#6faaf0"/></linearGradient>
+            </defs>
+            <path d="M145 48 Q146 38 159 36 L382 7 Q394 6 393 19 L369 184 L121 211Z" fill="#172e61" stroke="#182f60" stroke-width="10" stroke-linejoin="round"/>
+            <path d="M158 50 L380 22 L358 171 L138 195Z" fill="url(#screenFill)"/>
+            <path d="M219 87 267 109 314 87 267 65Z" fill="#367ADF"/><path d="M235 100v18c20 16 43 16 64 0v-18l-32 16Z" fill="#367ADF"/><path d="M314 87v28" stroke="#367ADF" stroke-width="4" stroke-linecap="round"/><circle cx="314" cy="118" r="4" fill="#367ADF"/>
+            <rect x="180" y="145" width="138" height="7" rx="3.5" fill="#6eb5f5"/><rect x="194" y="159" width="106" height="6" rx="3" fill="#9bcff9"/>
+            <path d="M121 211 369 184 454 217 Q461 221 448 228 L207 270 Q197 272 187 269 L47 239 Q39 236 49 231Z" fill="url(#laptopBase)" stroke="#d3eaff" stroke-width="4"/>
+            <path d="M166 222 362 199 403 217 207 250Z" fill="#315c9c" opacity=".9"/>
+            <g stroke="#9ccaff" stroke-width="2" opacity=".9">
+              <path d="M181 224 211 249M204 221 234 245M228 218 257 241M251 215 281 237M275 212 304 233M299 209 328 229M323 206 351 225"/>
+              <path d="M177 230 365 207M191 236 379 213M205 242 393 219"/>
+            </g>
+          </svg>
+        </div>
+        <div class="auth-motto"><span></span><em>Conocimiento que impulsa el futuro</em></div>
+      </aside>
+
+      <section class="auth-form-panel">
+        <div class="auth-logo" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><path d="M40 3 46 20 63 26 46 32 40 49 34 32 17 26 34 20Z" fill="currentColor"/><path d="M7 42c11-2 20 1 33 10 13-9 22-12 33-10M11 50c10-1 19 2 29 8 10-6 19-9 29-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          <span></span><strong>SIS<br><small>Repositorio Digital</small></strong>
+        </div>
+        <h2>Iniciar sesión</h2>
+        <p class="auth-subtitle">Ingresa tus credenciales para continuar</p>
+
+        <form id="login-form" class="auth-form">
+          <label class="input-wrap">
+            <span aria-hidden="true">♟</span>
+            <span class="sr-only">Usuario o correo institucional</span>
+            <input type="text" name="usuario" placeholder="Usuario o correo institucional" autocomplete="username" required>
+          </label>
+          <label class="input-wrap">
+            <span aria-hidden="true">▣</span>
+            <span class="sr-only">Contraseña</span>
+            <input id="password" type="password" name="password" placeholder="Contraseña" autocomplete="current-password" required>
+            <button class="password-toggle" type="button" id="toggle-password" aria-label="Mostrar contraseña" aria-pressed="false">◉</button>
+          </label>
+          <div class="form-options">
+            <label class="remember"><input type="checkbox" name="recordar"> <span>Recordar sesión</span></label>
+            <button type="button" class="text-button" id="forgot-password">¿Olvidaste tu contraseña?</button>
+          </div>
+          <button class="submit-button" type="submit"><span aria-hidden="true">↪</span> Ingresar</button>
+          <p class="form-feedback" id="login-feedback" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="divider"><span></span><b>o continúa como</b><span></span></div>
+        <div class="role-options" aria-label="Tipo de usuario">
+          <button type="button" class="role-option" data-role="Estudiante"><span aria-hidden="true">◆</span> Estudiante</button>
+          <button type="button" class="role-option" data-role="Docente"><span aria-hidden="true">♟</span> Docente</button>
+          <button type="button" class="role-option" data-role="Administrador"><span aria-hidden="true">⬟</span> Administrador</button>
+        </div>
+        <p class="role-note" id="role-note" aria-live="polite">Selecciona tu perfil si deseas identificar tu tipo de acceso.</p>
+        <div class="register-prompt">
+          <span>¿No tienes una cuenta?</span>
+          <a href="registro.html">Regístrate aquí <b aria-hidden="true">→</b></a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="auth-footer">
+    <a class="footer-brand" href="index.html">
+      <span class="footer-symbol" aria-hidden="true">✦</span>
+      <strong>SIS | Repositorio Digital</strong>
+    </a>
+    <span class="footer-divider"></span>
+    <span>Facultad Multidisciplinaria Oriental · Ingeniería de Sistemas</span>
+    <em>Conocimiento que impulsa el futuro</em>
+  </footer>
+  <script src="login.js"></script>
+</body>
+</html>
